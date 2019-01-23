@@ -1,0 +1,189 @@
+html{ margin: 0; padding: 0; box-sizing: border-box;}
+body{ margin: 0; padding: 0; font-family: sans-serif !important;}
+button:active, button:focus, button:hover{ outline:none !important;} 
+input:active, input:focus, input:hover{ outline:none !important;} 
+a{ text-decoration: none}
+textarea{ font-family: sans-serif;}
+.content { float: right !important}
+.clearfix:after{ content: "."; visibility: hidden; display: block; clear: both;}
+
+
+/* Menu header */
+.menu{ position: fixed; width: 7%; z-index: 1; transform: translateY(5%);}
+.menu ul{ list-style: none; margin: 0; padding: 0; color: #2196F3 !important; font-size: 53px; text-align: center;}
+.menu ul li{margin: 25px 0;}
+.menu ul li:hover{ transform: scale(1.5); transition: .5s }
+
+.menu .menu-icon [class*="fa-"]::before{ position: absolute; transform: translate(-50%, -100%); font-size: 40px; transition: all .5s; color: #2196F3 !important}
+.menu .menu-icon [class*="fa-"]::after{font-family: sans-serif; font-size: 13px; color: #2196F3; position: absolute; transform: translate(-50%, -50%); left: -140%; transition: all .5s; font-weight: bold}
+.menu .menu-icon [class*="fa-"]:hover::after{ left: 50%; top: 92%;}
+/* Seach */
+.menu form{position: relative; left: 50%; transform: translate(-50%, 0%); transition: all 1s; width: 50px; height: 50px; box-sizing: border-box; border-radius: 25px; border: 4px solid #2196F3; padding: 5px;}
+.menu input{ position: absolute; top: 0; left: 0; width: 100%; height: 42.5px;line-height: 30px; outline: 0; border: 0; display: none;font-size: 1em; border-radius: 20px; padding: 0 20px;}
+.menu i{ font-size: 30px; color: #2196F3}
+.menu .fa .fa-search{ box-sizing: border-box; padding: 10px; width: 42.5px; height: 42.5px; position: absolute; top: 0; right: 0; border-radius: 50%; color: #fff; text-align: center; font-size: 1.2em;transition: all 1s;}
+.menu form:hover{ width: 200px; cursor: pointer;}
+.menu form:hover input{ display: block; }
+
+.menu .fa-house-damage::after{ content: "Trang Chủ"}
+.menu .fa-bicycle::after{ content: "Đi Bằng Gì ?"}
+.menu .fa-utensils::after{ content: "Ăn Gì"}
+.menu .fa-gifts::after{ content: "Mua Quà Gì ?"}
+.menu .fa-hotel::after{ content: "Ở Đâu"}
+.menu .fa-map-marked-alt::after{ content: "Đi Chơi Ở Đâu"}
+/* Content */
+.content{float: right; margin: 0; padding: 0; position: relative; z-index: 0;}
+/* Home content */
+#home{ position: relative; background: #2196F3; background-size: cover; height: 100vh; opacity: 1;}
+
+#home span{position: absolute; width: 84%; text-align: center; font-size: 60px; top: 3%; left: 50%; transform: translateX(-50%); color: tomato;}
+#home span i{ width: 12%;text-align: center; line-height: 96px;}
+#home span i:hover{ color: #fff;box-shadow: 0px 0px 20px black; border-radius: 5px; background: black; transition: 1.5s;}
+
+#home div{font-family: monospace; position: relative; transform: translate(-50%, -50%); top: 50%; left: 50%;}
+#home div h3{ font-size: 20px; text-transform: uppercase; color: #68332f; text-align: center; padding-bottom: 60px; letter-spacing: 1px;}
+#home div div{ text-align: justify; padding: 10px 113px; color: #fff; font-size: 17px; letter-spacing: 0.4px;}
+#home div button{ width: 200px; height: 50px; color: #2196F3; font-size: 20px; font-weight: bold; background: #fff; border: none; border-radius: 25px; left: 50%; position: relative; transform: translateX(-50%);}
+#home div button a{ color: #2196F3}
+#home div button:hover{ color: #fff; background: #2196F3; border: 2px solid #fff; transition: .5s;}
+#home div button:hover a{ color: #fff;}
+#home div button:active{ box-shadow: 0 0 20px black; transition: .1s;}
+
+#vehical{ text-align: center; padding: 50px 0; background: #efecec; position: relative; }
+#vehical h3{ margin-bottom: 60px; color: tomato; position: relative; left: 50%; transform: translateX(-50%);font-size: 20px; width: max-content; letter-spacing: 1px; padding-bottom: 30px; border-bottom: 2px solid;}
+#vehical div{ padding: 10px; box-sizing: border-box; border-radius: 10px}
+#vehical [class*="col-"]:hover{ box-shadow: 0px 2px 15px rgba(13, 15, 26, 0.863); background: #9E9E9E; transition: .5s}
+#vehical div i{ font-size: 150px; color: #2196F3;}
+#vehical div p.title{ font-size: 20px; letter-spacing: 1px; font-weight: bold; text-transform: uppercase; text-align: center}
+#vehical div p{ text-align: justify}
+
+#food{ text-align: center; padding: 50px 0; background: #2196F3; position: relative;}
+#food h3{ margin-bottom: 60px; color: #E53935; position: relative; left: 50%; transform: translateX(-50%); font-size: 20px; width: max-content; letter-spacing: 1px; padding-bottom: 30px; border-bottom: 2px solid;}
+#food div{ cursor: pointer; position: relative; padding: 10px; box-sizing: border-box; border-radius: 5px; margin: 10px 0;}
+#food div img{ width: 100%; transition: .7s; border-radius: 10px; border: 2px solid #fff;}
+#food div span{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, 200%); color: #fff; font-size: 22px; font-weight: bold; width: max-content; opacity: 0; transition: .7s;}
+#food div:hover img{ filter: blur(2px) brightness(50%); box-shadow: 0px 5px 10px black; border: 2px solid; border-radius: 0}
+#food div:hover span{ transform: translate(-50%, -35%); opacity: 1;}
+#food button{ font-size: 18px; font-weight: bold; color: #2196F3; background: #fff; border: 2px solid #fff; height: 40px; padding: 0 20px; margin-top: 30px; border-radius: 20px;}
+#food button:hover{ background: #2196F3; color: #fff; transition: .3s;}
+#food button:active{ background: tomato; transition: .1s; box-shadow: 0 0 10px black}
+
+#gift{ text-align: center; padding: 50px 0; background: #efecec; position: relative;}
+#gift h3{ margin-bottom: 60px; margin-bottom: 50px; color: #E53935; position: relative; left: 50%; transform: translateX(-50%); font-size: 20px; width: max-content; letter-spacing: 1px; padding-bottom: 30px; border-bottom: 2px solid;}
+#gift div{ padding: 10px; box-sizing: border-box;}
+#gift div img{ width: 100%; border-radius: 40px 0 40px 0px; border: 3px solid #f4faff; box-sizing: border-box; transition: 1s;}
+#gift div img:hover{ box-shadow: 0px -5px 20px; border-radius: 0; border: 3px solid #2196F3}
+#gift div p{ letter-spacing: 1px; font-size: 16px; width: max-content; position: relative; left: 50%; transform: translateX(-50%); padding: 10px;}
+#gift div p::after{ content: ''; position: absolute; left: 0; bottom: 0; width: 50%; height: 100%; background: none; border: 1px solid black;border-right-width: 0px; border-top-width: 0px; transition: 0.7s;}
+#gift div p:hover::after{ width: 100%; border-right-width: 1px; border-top-width: 1px; border-color: tomato}
+#gift div.gift-bottom{ margin-top: 50px; background: #858585; float: left; border: 1px solid; position: relative; left: 50%; transform: translateX(-50%); padding: 15px 30px; border-radius: 35px;}
+#gift div.gift-bottom button{ margin: 0 10px; border-color: white black black white; font-size: 16px; width: 40px;  height: 40px; border-radius: 20px; background: #00BCD4; transition: all .7s}
+#gift div.gift-bottom button:hover{ transform: scale(1.2); border-color: black white white black;}
+#gift div.gift-bottom button.active{ background: tomato;}
+#gift div.gift-bottom button:active{ background: tomato; transition: .1s;}
+
+#hotel{ text-align: center; padding: 50px 0; background: #2196F3; position: relative;}
+#hotel h3{ margin-bottom: 60px; color: #E53935; position: relative; left: 50%; transform: translateX(-50%); font-size: 20px; width: max-content; letter-spacing: 1px; padding-bottom: 30px; border-bottom: 2px solid;}
+#hotel div{ padding: 10px; box-sizing: border-box; z-index: 1;}
+#hotel img{ width: 100%; position: relative;animation-iteration-count: infinite; animation-name: ex; animation-duration: 4s; border: 3px solid #fff; box-shadow: 0 5px 15px black; transition: 4s}
+#hotel img:hover{border-color: #E53935; animation: none; transform: scale(1.1); z-index: 1; transition: .5s}
+@keyframes ex{
+    0%{ border-radius: 50px 0 0 0; }
+    25%{ border-radius: 0 50px 0 0}
+    50%{ border-radius: 0 0 50px 0;}
+    75%{ border-radius: 0 0 0 50px }
+    100%{ border-radius: 50px 0 0 0}
+}
+#hotel div p{ color: #fff; border: 1px solid; letter-spacing: 1px; font-size: 16px; width: 100%; position: relative; left: 50%; transform: translateX(-50%); padding: 10px; border-radius: 50px; z-index: -1;}
+#hotel div p{ color: #fff; border: none; border-bottom: 2px solid; letter-spacing: 1px; font-size: 18px; width: 100%; position: relative; border-radius: 50px; margin: 28% 0 50px 0; z-index: 1;}
+#hotel button{ font-size: 18px; font-weight: bold; color: #2196F3; background: #fff; border: 2px solid #fff; height: 40px; padding: 0 20px; margin-top: 30px; border-radius: 20px;}
+#hotel button:hover{ background: #2196F3; color: #fff; transition: .3s;}
+#hotel button:active{ background: tomato; transition: .1s; box-shadow: 0 0 10px black}
+
+#map{ text-align: center; padding: 50px 0; background: #efecec; position: relative;}
+#map h3{ margin-bottom: 60px; margin-bottom: 50px; color: #E53935; position: relative; left: 50%; transform: translateX(-50%); font-size: 20px; width: max-content; letter-spacing: 1px; padding-bottom: 30px; border-bottom: 2px solid;}
+#map div{ padding: 10px; box-sizing: border-box;}
+#map div img{ width: 70%; border: 3px solid #2196F3; box-sizing: border-box; transition: 1s; transform: rotateX(57deg) rotateZ(-45deg); box-shadow: -10px 10px 15px 0px black;}
+#map div img:hover{ width: 90%; transform: translateY(-20px); box-shadow: 0px 10px 15px 0px black }
+#map div img:hover p{ border: 1px solid tomato;}
+#map div p{ letter-spacing: 1px; font-size: 16px; width: max-content; position: relative; left: 50%; transform: translateX(-50%); padding: 10px; border-bottom: 1px solid;}
+#map div.map-control{ margin-top: 50px; background: #858585; float: left; border: 1px solid; position: relative; left: 50%; transform: translateX(-50%); padding: 15px 30px; border-radius: 35px;}
+#map div.map-control button{ margin: 0 10px; border-color: white black black white; font-size: 16px; width: 40px; height: 40px; border-radius: 20px; background: #00BCD4; transition: all .7s;}
+#map div.map-control button:hover{  transform: scale(1.2); border-color: black white white black;}
+#map div.map-control button.active{ background: tomato;}
+#map div.map-control button:active{ background: tomato; transition: .1s;}
+
+#contact{ color: #fff; text-align: center; padding: 50px 0; background: #2196F3; position: relative;}
+#contact h3{ margin-bottom: 60px; color: #E53935; position: relative; left: 50%; transform: translateX(-50%); font-size: 20px; width: max-content; letter-spacing: 1px; padding-bottom: 30px; border-bottom: 2px solid;}
+#contact .left-contact{ text-align: left; padding: 10px; box-sizing: border-box;}
+#contact .left-contact div{ margin: 12px 0;}
+#contact .left-contact div i{ font-size: 20px; color: #F44336;}
+#contact .left-contact div.icon{ text-align: center}
+#contact .left-contact div.icon i{ font-size: 30px; padding: 8px; border-radius: 35px; margin: 20px 3px; width: 35px; height: 35px; background: #fff; color: #2196f3; border: 1px solid #2196F3; transition: all .5s;}
+#contact .left-contact div.icon i.fa-facebook{ color: #2196F3}
+#contact .left-contact div.icon i.fa-facebook:hover{ background: #2196F3; color: #fff; border: 2px solid #fff}
+#contact .left-contact div.icon i.fa-instagram{ color: orangered}
+#contact .left-contact div.icon i.fa-instagram:hover{ background: orangered; color: #fff; border: 2px solid #fff}
+#contact .left-contact div.icon i.fa-youtube-square{ color: red}
+#contact .left-contact div.icon i.fa-youtube-square:hover{ background: red; color: #fff; border: 2px solid #fff}
+#contact .left-contact div.icon i.fa-github{ color: black}
+#contact .left-contact div.icon i.fa-github:hover{ background: black; color: #fff; border: 2px solid #fff}
+#contact .right-contact{ margin-left: -5px; color: #2196f3; background: #5a5858; border-radius: 10px; box-shadow: -3px 3px 10px black;}
+#contact .right-contact h4{ font-size: 16px; font-weight: normal; color: #2196f3; letter-spacing: .6px; border-bottom: 1px solid; padding: 10px 0;}
+#contact .right-contact div{ padding: 10px; box-sizing: border-box;}
+#contact .right-contact div p{ padding: 10px; margin: 0; text-align: left;}
+#contact .right-contact div input{ width: 100%; height: 40px; padding: 0 10px; box-sizing: border-box;}
+#contact .right-contact div textarea{ width: 100%; height: 100px; padding: 10px; box-sizing: border-box;}
+#contact .right-contact div input, textarea{ background: no-repeat; border: 1px solid #2196f3; border-radius: 5px; color: #2196f3;}
+#contact .right-contact button{ font-size: 18px; font-weight: bold; color: #2196F3; background: none; border: 2px solid #2196f3; height: 40px; padding: 0 30px; margin: 30px; border-radius: 20px;}
+#contact .right-contact button:hover{ background: #2196F3; color: #fff; border: 2px solid #fff; transition: .3s}
+
+#footer{ height: 100px; position: relative; background: #1a1a1a; color: #fff;}
+#footer div{ position: relative; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; letter-spacing: 3px;}
+#footer button{ float: right; width: 40px; height: 40px; font-size: 20px; border-radius: 20px; border: 2px solid #1a1a1a; position: relative; top: -35px; right: 15px; background: #2196f3;}
+#footer button:hover{ transform: scale(1.2); background: #fff; transition: .5s}
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+    float: left;
+}
+
+/* For tablets: */
+@media only screen and (min-width: 500px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+
+/* For desktop: */
+@media only screen and (min-width: 787px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
